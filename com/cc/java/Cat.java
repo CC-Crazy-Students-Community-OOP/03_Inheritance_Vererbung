@@ -2,54 +2,42 @@ package com.cc.java;
 
 public class Cat {
  
-   private String name;
-   private String furColor;
+    private String name;
+    private String furColor;
+    private int age;
+    private int level;
 
-   private int age;
-   private boolean isFemale;
-
-   private int counter;
-
-    public Cat(String name, String furColor, int age, boolean isFemale) {
+    public Cat( String name, String furColor    	 ) {
         this.name = name;
         this.furColor = furColor;
         this.age = age;
-        this.isFemale = isFemale;
 	}
 
-    public String getStringAttributes(String flag) {
-        switch (flag) {
+    public String getStringAttributes( String flag ) {
+        switch ( flag ) {
             case "#name":
                 return name;
-            case "#color":
+            case "#furColor":
                 return furColor;
             default:
-                return "#!ERROR";
+                return "Error";
         }
     }
-
     public String getAge() {
-        if (!isFemale) {
-            return Integer.toString(age);
-        } else {
-            return checkEscalationLevel(); 
-        }
+        return checkEscaltionLevel();
     }
 
-    private String checkEscalationLevel() {
-    
-    counter++;
-    
-        switch (counter) {
+    private String checkEscaltionLevel() {
+        level++;
+        switch ( level ) {
             case 1:
-                return "This is an inappropriate question!";
+                return "DARE to ask";
             case 2:
-                return "I've told you once!"; 
+                return "Really?";
             case 3:
-                return "Talk to the hand!";        
+                return "Seriously?";
             default:
-                return "1#!?&&%"; 
+                return "Some peolples never learn to be decent";
         }
     }
- 
 }
