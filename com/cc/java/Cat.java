@@ -17,11 +17,11 @@ public class Cat extends Supercat{
             case 1:
                 return "    Alter: " + App.c( "#c" ) +  "DARE to ask";
             case 2:
-                return "    Alter: " + App.c( "#c" ) +  "Really?";
+                return "    Alter: " + App.c( "#y" ) +  "Really?";
             case 3:
-                return "    Alter: " + App.c( "#c" ) +  "Seriously?";
+                return "    Alter: " + App.c( "#r" ) +  "Seriously?";
             default:
-                return "    Alter: " + App.c( "#c" ) +  "Some peolples never learn to be decent";
+                return "    Alter: " + App.c( "#r" ) +  "Some peolples never learn to be decent";
         }
     }
 }
