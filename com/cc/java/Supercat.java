@@ -3,7 +3,7 @@ package com.cc.java;
 public class Supercat {
     private String name;
     private String color;
-    private int age;
+    protected int age;
 
     public Supercat( String name, String color, int age ) {
         this.name = name;
@@ -14,12 +14,11 @@ public class Supercat {
     public String getStringAttributes( String flag ) {
         switch ( flag ) {
             case "#name":
-                return name;
+                return App.c( "#g" ) + name;
             case "#color":
-                return color;
+                return App.c( "#c" ) + color;
             default:
-                return "Error";
+                return App.c( "#r" ) + "Error";
         }
     }
-
 }

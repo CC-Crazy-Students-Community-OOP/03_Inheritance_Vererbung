@@ -1,24 +1,27 @@
 package com.cc.java;
 
-public class Cat {
-    private int age;
+public class Cat extends Supercat{
     private int level;
 
-    public String getAge() {
-        return checkEscaltionLevel();
+    public Cat( String name, String color, int age ) {
+        super( name, color, age );
+    }
+
+    public String getAge() { 
+        return checkEscaltionLevel(); 
     }
 
     private String checkEscaltionLevel() {
         level++;
         switch ( level ) {
             case 1:
-                return "DARE to ask";
+                return "    Alter: " + App.c( "#c" ) +  "DARE to ask";
             case 2:
-                return "Really?";
+                return "    Alter: " + App.c( "#c" ) +  "Really?";
             case 3:
-                return "Seriously?";
+                return "    Alter: " + App.c( "#c" ) +  "Seriously?";
             default:
-                return "Some peolples never learn to be decent";
+                return "    Alter: " + App.c( "#c" ) +  "Some peolples never learn to be decent";
         }
     }
 }
